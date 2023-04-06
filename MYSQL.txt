@@ -1,0 +1,140 @@
+sudo yum install mysql
+
+mysql -h <endpoint> -u <user_name> -p
+
+------------------------------------------------------------------------------------------
+
+---> After login to MySql database server:
+
+mysql> system cls;
+	---> which is used to clear the screen. 
+
+------------------------------------------------------------------------------------------
+
+mysql> show databases;
+	---> which displays list of the databases.
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| ram                |
+| sakila             |
+| sys                |
+| world              |
++--------------------+
+
+------------------------------------------------------------------------------------------
+
+** for Creating a Database:
+
+** mysql> create database employee;
+	----> which is used to create a database.
+
+	---> after creating a database employee if you want to check while datebase is created or not use the below command....
+   
+** mysql> show databases;
+
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| ram                |
+| sakila             |
+| sys                |
+| world              |
+| employee           |
++--------------------+
+
+-------------------------------------------------------------------------------------------------
+ ** TO use existing database:
+
+mysql> use employee;
+	---> which uses the employee[database] to CRUD [create,read,update,delete] operations.
+
+-------------------------------------------------------------------------------------------------
+** To create table in selected database:	
+
+** mysql> create table employee(
+	->empid varchar(20),
+	->fname varchar(20),
+	->lname varchar(20),
+	->pri_skill varchar(20),
+	->location varchar(20));	---> which is used to create a no. of clounms in table along with table name[ex: employee].
+						---> colunm names are like empid, fname, lname, pri_skills, location...
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+mysql> SHOW TABLES;
+	----> which shows the list of tables.
++---------------+
+| Tables_in_ram |
++---------------+
+| student       |
+| employee      |
++---------------+
+
+-------------------------------------------------------------------------------------------------------
+
+** for creating table:
+
+mysql> CREATE TABLE satish (
+       -> StudentID int,
+       -> StudentName varchar(20),
+       -> RestartCity varchar(20),
+       -> Graduationday int );
+
+--------------------------------------------------------------------------------------------------------
+
+SELECT * FROM <table_name>
+
+
+SHOW COLUMNS FROM <table_name>
+            or
+desc <table name>  {desc : describe}
+
+mysql> desc student;
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| std_id       | int         | YES  |     | NULL    |       |
+| student_name | varchar(30) | YES  |     | NULL    |       |
+| student_per  | float       | YES  |     | NULL    |       |
+| student_no   | varchar(10) | YES  |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+
+			or
+
+mysql> show columns from student;
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| std_id       | int         | YES  |     | NULL    |       |
+| student_name | varchar(30) | YES  |     | NULL    |       |
+| student_per  | float       | YES  |     | NULL    |       |
+| student_no   | varchar(10) | YES  |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+
+--------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
